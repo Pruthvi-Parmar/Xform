@@ -23,6 +23,7 @@ export async function POST(request) {
         const {userId} = auth()
 
     if (!userId) {
+        //check if user is present or not!
         return NextResponse.json({error: "Unauthorized"}, {status: 401})
     }
 
