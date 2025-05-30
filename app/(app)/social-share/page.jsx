@@ -57,7 +57,7 @@ const socialFormats = {
         if(!imageRef.current) return;
 
         fetch(imageRef.current.src)
-        .then((response) => response.blob())
+        .then((response) => (response.blob()))
         .then((blob) => {
             const url = window.URL.createObjectURL(blob)
             const link = document.createElement("a");
